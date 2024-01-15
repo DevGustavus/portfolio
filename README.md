@@ -1,7 +1,7 @@
 <h1 align="center">Portfolio</h1>
 
 ## 📲 View the project here
-<a href="https://devgustavus.github.io/portofolio/">https://devgustavus.github.io/portofolio/</a>
+<a href="https://devgustavus.github.io/portfolio/">https://devgustavus.github.io/portfolio/</a>
 
 ## 📖 About the project
 This project stands out for its unique purpose: to professionally introduce myself to the world. Nevertheless, I employed various techniques to make the site aesthetically pleasing and dynamic, ensuring a good user experience. In my first portfolio, I refrained from using any frameworks, opting instead for "pure" languages and tools. I constructed each element of the site through manual effort, enhancing my understanding of its functionality.
