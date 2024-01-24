@@ -383,11 +383,16 @@ main .certificados {
 }
 
 .accordion-box.active #box-content-workshops {
-    height: 215px;
+    height: 240px;
     overflow-y: hidden;
 }
 
 .accordion-box.active #box-content-hackathons {
+    height: 145px;
+    overflow-y: hidden;
+}
+
+.accordion-box.active #box-content-bootcamps {
     height: 145px;
     overflow-y: hidden;
 }
@@ -598,12 +603,17 @@ main .softwares {
 
     .accordion-box.active #box-content-workshops {
         font-size: 0.9rem;
-        height: 210px;
+        height: 240px;
     }
 
     .accordion-box.active #box-content-hackathons {
         font-size: 0.9rem;
         height: 170px;
+    }
+
+    .accordion-box.active #box-content-bootcamps {
+        height: 170px;
+        overflow-y: hidden;
     }
 
     /* SOFTWARES E FERRAMENTAS */
@@ -697,6 +707,11 @@ main .softwares {
         font-size: 0.8rem;
     }
 
+    .accordion-box.active #box-content-bootcamps {
+        height: 155px;
+        font-size: 0.8rem;
+    }
+
     /* FOOTER */
 
     footer {
@@ -778,6 +793,10 @@ main .softwares {
     }
 
     .accordion-box.active #box-content-hackathons {
+        font-size: 0.75rem;
+    }
+
+    .accordion-box.active #box-content-bootcamps {
         font-size: 0.75rem;
     }
 
