@@ -39,6 +39,13 @@ var swiper = new Swiper(".swiper", {
       el: ".swiper-pagination",
     },
     keyboard: true,
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    autoplay: {
+      delay: 5000,
+      pauseOnMouseEnter: true,
+    },
 });
 
 // Função Accordion
@@ -54,3 +61,18 @@ for (let i = 0; i < accordions.length; i++) {
     icon.textContent = accordions[i].classList.contains('active') ? '-' : '+';
   });
 }
+
+// ANIMAÇÃO DE SCROLL SUAVE AO MUDAR DE SECTION
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+
+      window.scrollTo({
+          top: target.offsetTop,
+          behavior: 'smooth' // Adiciona um comportamento de rolagem suave
+      });
+  });
+});

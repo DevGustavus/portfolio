@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--CSS STYLE-->
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
 
     <!--ICONS CLOUDFLARE-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,19 +18,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
     <!--FAVICON-->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
     <title>Devgustavus</title>
 </head>
 <body>
     <header>
-        <h1>Dev <span>Gustavus</span></h1>
+        <a href="./../../index.html">
+            <h1>Dev <span>Gustavus</span></h1>
+        </a>
         <nav>
             <ul class="navegacao-primaria">
                 <li><a href="#sobre">About me</a></li>
                 <li><a href="#projetos">Projects</a></li>
                 <li><a href="#certificados">Certifications</a></li>
                 <li><a href="#softwares">Softwares</a></li>
+                <li><a href="./assets/pages/contato.html">Contact</a></li>
             </ul>
             
             <div class="menu">
@@ -47,10 +50,19 @@
             <h2>Hi there! I'm</h2>
             <h2 class="digitando">a Professional Full Stack Developer.</h2>
             <p>Olá, me chamo Gustavo Machado e curso ADS no IFTM. Sou desenvolvedor Full Stack e tenho expêriencia no mercado como Freelancer.</p>
-            <a href="Docs/cv_DevGustavus.pdf" download="cv_DevGustavus.pdf">Download CV</a>
+            <div class="contato">
+                <a href="Docs/cv_DevGustavus.pdf" download="cv_DevGustavus.pdf">Download CV</a>
+
+                <a href="https://linktr.ee/DevGustavus" target="_blank" id="linkTree">
+                    <div>
+                        <i class="fa-solid fa-tree"></i>
+                        <p>LinkTree</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <img src="assets/images/gustavus.png" alt="imagem pessoa">
+        <img src="./assets/images/gustavus.png" alt="imagem pessoa">
     </section>
 
     <main>
@@ -66,7 +78,7 @@
                 </div>
             </div>
             
-            <img src="assets/images/foto_perfil.jpeg" alt="imagem pessoa ilustrativa">
+            <img src="./assets/images/foto_perfil.jpeg" alt="imagem pessoa ilustrativa">
 
             <div class="sobre-conteudo">
                 <div class="sobre-texto">
@@ -146,21 +158,70 @@
                     <div class="swiper-slide">
                         <div class="project-img">
                             <a href="https://devgustavus.github.io/Js-BMI_calculator/" target="_blank">
-                                <img src="assets/images/BMI_calculator_page.png" alt="A BMI calculator project">
+                                <img src="./assets/images/projects_img/BMI_calculator_page.png" alt="A BMI calculator project">
                             </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="project-img">
                             <a href="https://devgustavus.github.io/LandingPage_hamburgaria/" target="_blank">
-                                <img src="assets/images/hamburgariaPage.png" alt="A fast food landing page project">
+                                <img src="./assets/images/projects_img/hamburgariaPage.png" alt="A fast food landing page project">
                             </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="project-img">
                             <a href="https://devgustavus.github.io/form_login_cadastro/index.html" target="_blank">
-                                <img src="assets/images/login_page.png" alt="A login page project">
+                                <img src="./assets/images/projects_img/login_page.png" alt="A login page project">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://github.com/DevGustavus/Flow-Free-Copy/tree/main" target="_blank">
+                                <img src="./assets/images/projects_img/flow_menu.png" alt="Flow Menu">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://devgustavus.github.io/js-memory-game/" target="_blank">
+                                <img src="./assets/images/projects_img/memory_game.png" alt="Memory game">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://devgustavus.github.io/js-yugioh-game/" target="_blank">
+                                <img src="./assets/images/projects_img/yugioh.png" alt="Yugioh game">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://github.com/DevGustavus/API-Angular-SpringBoot-Gerenciador-Funcionarios" target="_blank">
+                                <img src="./assets/images/projects_img/employee_manager.png" alt="Employee Manager">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://angular-blog-nu-two.vercel.app" target="_blank">
+                                <img src="./assets/images/projects_img/the_news.png" alt="the news">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://angular-boot-strap-quitanda-online.vercel.app" target="_blank">
+                                <img src="./assets/images/projects_img/quitanda_online.png" alt="quitanda online">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-img">
+                            <a href="https://devgustavus.github.io/WebDesign-DIOLandingPage/" target="_blank">
+                                <img src="./assets/images/projects_img/trilha_css.png" alt="trilha css">
                             </a>
                         </div>
                     </div>
@@ -168,6 +229,7 @@
               
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
+              
               <div class="swiper-pagination"></div>
             </div>
 
@@ -181,6 +243,30 @@
             </div>
 
             <div class="accordion">
+                <!--Education-->
+                <div class="accordion-box">
+                    <div class="box-label">
+                        <span>Formação</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="box-content" id="box-content-formacao">
+                        <div class="box-content-card">
+                            <div>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <h3>ADS:</h3>
+                            </div>
+                            <p>Análise e desenvolvimento de sistemas | mar de 2022 a dez de 2024 - Instituto Federal do Triângulo Mineiro.</p>
+                        </div>
+
+                        <div class="box-content-card">
+                            <div>
+                                <i class="fa-solid fa-flask"></i>
+                                <h3>Técnico em Química:</h3>
+                            </div>
+                            <p>Técnico de Química | mar de 2019 a jun de 2020 - Anhanguera Educacional.</p>
+                        </div>
+                    </div>
+                </div>
                 <!--WORKSHOPS AND MARATHONS LIST DROPDOWN-->
                 <div class="accordion-box">
                     <div class="box-label">
@@ -268,7 +354,15 @@
                                     <h3>Game Development:</h3>
                                 </div>
                                 <p>BootCamp "Potência Tech iFood - Desenvolvimento de Jogos" | 77 horas - Plataforma DIO.</p>
-                            </div> 
+                            </div>
+
+                            <div class="box-content-card">
+                                <div>
+                                    <i class="fa-solid fa-robot"></i>
+                                    <h3>Azure AI Fundamentals:</h3>
+                                </div>
+                                <p>BootCamp "DIO - Microsoft Azure AI Fundamentals" | 35 horas - Plataforma DIO.</p>
+                            </div>
                         </div>
                     </div>
             </div>
@@ -341,8 +435,17 @@
                     <i class="devicon-spring-plain"></i>
                     <p>SpringBoot</p>
                 </div>
+
+                <div class="softwares-container-card">
+                <i class="devicon-bootstrap-plain"></i>
+                    <p>BootStrap</p>
+                </div>
+
+                <div class="softwares-container-card">
+                    <i class="devicon-typescript-plain"></i>
+                    <p>TypeScript</p>
+                </div>
             </div>
-            
         </article>
     </main>
 
@@ -362,10 +465,10 @@
                 </div>
             </a>
 
-            <a href="https://profile.indeed.com/p/gustavom-04swvyy" target="_blank">
+            <a href="https://linktr.ee/DevGustavus" target="_blank">
                 <div>
-                    <i class="fa-solid fa-briefcase"></i>
-                    <p>Indeed</p>
+                    <i class="fa-solid fa-tree"></i>
+                    <p>LinkTree</p>
                 </div>
             </a>
             
@@ -376,16 +479,16 @@
                 <li><a href="#sobre">About me</a></li>
                 <li><a href="#projetos">Projects</a></li>
                 <li><a href="#certificados">Certifications</a></li>
-                
+                <li><a href="./assets/pages/contato.html">Contact</a></li>
             </ul>
         </nav>
         <div class="copyright">
-            <p>Copyright &copy;2023; Designed by DevGustavus.</p>
+            <p>Copyright &copy;2024; Designed by DevGustavus.</p>
         </div>
     </footer>
     
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="assets/JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/JS/script.js"></script>
     
 </body>
 </html>

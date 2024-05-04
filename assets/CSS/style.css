@@ -25,9 +25,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 
-header h1 {
+header a h1 {
     color: #dc3545;
     font-size: 2.5rem;
     margin-right: 30px;
@@ -72,7 +73,7 @@ header .navegacao-primaria li:hover {
 /* DOWNLOAD CV SECAO*/
 
 .section-div {
-    animation: inicializar .7s forwards;
+    animation: inicializar .8s forwards;
     background-color: #000;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -102,7 +103,8 @@ header .navegacao-primaria li:hover {
 }
 
 .section-div div a {
-    justify-self: start;
+    min-width: 180px;
+    text-align: center;
     color: #f7f7f7;
     padding: 15px 40px;
     border-radius: 5px;
@@ -119,6 +121,29 @@ header .navegacao-primaria li:hover {
     margin-left: 5px;
     opacity: 1;
     animation: pisca .5s infinite;
+}
+
+.section-div .contato {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#linkTree{
+    padding: 0;
+}
+
+#linkTree:hover{
+    background-color: #2d9e42;
+}
+
+#linkTree div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12.5px 40px;
+    gap: 10px;
+    margin: 0;
 }
 
 .section-div img {
@@ -150,6 +175,17 @@ header .navegacao-primaria li:hover {
     }
 }
 
+@keyframes inicializar2 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 /* SEÇÃO PRINCIPAL SOBRE MIM */
 
 main {
@@ -164,6 +200,7 @@ main .sobre {
     justify-content: center;
     padding: 40px;
     background-color: #111;
+    animation: inicializar2 .8s forwards;
 }
 
 .sobre-titulo {
@@ -325,6 +362,7 @@ main .projetos {
 .swiper {
     grid-column: 1/-1;
     width: 100%;
+    height: 100%;
 }
 
 .swiper-slide {
@@ -336,6 +374,17 @@ main .projetos {
 
 .project-img img {
     width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    padding: 30px;
+    transition: transform 0.1s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.4);
 }
 
 /* SEÇÃO CERTIFICADOS ACCORDION*/
@@ -382,6 +431,11 @@ main .certificados {
     overflow-y: hidden;
 }
 
+.accordion-box.active #box-content-formacao {
+    height: 145px;
+    overflow-y: hidden;
+}
+
 .accordion-box.active #box-content-workshops {
     height: 240px;
     overflow-y: hidden;
@@ -393,7 +447,7 @@ main .certificados {
 }
 
 .accordion-box.active #box-content-bootcamps {
-    height: 145px;
+    height: 216px;
     overflow-y: hidden;
 }
 
@@ -567,6 +621,12 @@ main .softwares {
         padding: 40px;
     }
 
+    .section-div .contato {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
     /* SEÇÃO PRINCIPAL SOBRE MIM */
 
     main .sobre {
@@ -611,11 +671,6 @@ main .softwares {
         height: 170px;
     }
 
-    .accordion-box.active #box-content-bootcamps {
-        height: 170px;
-        overflow-y: hidden;
-    }
-
     /* SOFTWARES E FERRAMENTAS */
 
     main .softwares {
@@ -623,7 +678,7 @@ main .softwares {
     }
 }
 
-@media (max-width: 757px) {
+@media (max-width: 852px) {
 
     /* HEADER */
 
@@ -640,7 +695,6 @@ main .softwares {
         flex-direction: column;
         justify-content: space-around;
         padding: 10px;
-        background: #000;
         z-index: 999; /* Defina um valor alto de z-index */
         transition: 0.3s, right 0.3s;
     }
@@ -665,6 +719,9 @@ main .softwares {
     .menu.ativo .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+}
+
+@media (max-width: 757px) {
 
     /* SEÇÃO SOBRE MEUS PROJETOS */
 
@@ -685,6 +742,11 @@ main .softwares {
     .softwares-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .accordion-box.active #box-content-formacao {
+        height: 160px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -697,6 +759,10 @@ main .softwares {
 
     /* SEÇÃO CERTIFICADOS ACCORDION*/
 
+    .accordion-box.active #box-content-formacao {
+        font-size: 0.8rem;
+    }
+
     .accordion-box.active #box-content-workshops {
         height: 265px;
         font-size: 0.8rem;
@@ -708,7 +774,7 @@ main .softwares {
     }
 
     .accordion-box.active #box-content-bootcamps {
-        height: 155px;
+        height: 175px;
         font-size: 0.8rem;
     }
 
@@ -797,6 +863,7 @@ main .softwares {
     }
 
     .accordion-box.active #box-content-bootcamps {
+        height: 225px;
         font-size: 0.75rem;
     }
 
@@ -819,5 +886,131 @@ main .softwares {
     footer .copyright {
         font-weight: 300;
         font-size: 0.8rem;
+    }
+}
+
+/* ================== PAGINA HTML CONTATO ================== */
+
+.main-contato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+}
+
+.section-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 650px;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #111111;
+    animation: inicializar .8s forwards;
+}
+
+.field-contato {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    border-color: #cccccc;
+    background-color: #212124;
+}
+
+.field-contato legend {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.form-contato {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-contato div label {
+    font-size: 1.2rem;
+}
+
+.form-contato div input {
+    width: 100%;
+    height: 30px;
+    padding: 8px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-family: 'poppins';
+    background-color: #cccccc;
+}
+
+#message {
+    width: 100%;
+    height: 200px;
+    padding: 8px;
+    font-size: 1.2rem;
+    font-family: 'poppins';
+    border: none;
+    border-radius: 5px;
+    background-color: #cccccc;
+}
+
+.form-contato #submit {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #7a1d26;
+    color: #f7f7f7;
+    transition: 0.3s;
+}
+
+.form-contato #submit:hover {
+    background-color: #2d9e42;
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+
+    /* PAGINA HTML CONTATO */
+
+    .section-contato {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-contato {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* ================== PAGINA HTML next ================== */
+
+.section-contato .next-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-contato .next-div img {
+    width: 500px;
+}
+
+@media (max-width: 530px) {
+
+    .section-contato .next-div img {
+        width: 100%;
     }
 }
